@@ -1,1 +1,1 @@
-# Example-Lesson
+# RStudio Instructor Example-Lesson
