@@ -1,0 +1,36 @@
+---
+title: "2018 Loan Data Analysis"
+author: "Leo Glowacki"
+date: "5/11/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+# load packages
+library(tidyverse)
+# import dataset
+loan <- read_csv("loan_2018.csv")
+```
+
+```{r}
+ggplot(loan) + 
+  geom_boxplot(aes(x=grade, y=loan_amnt, fill=purpose)) + 
+  labs(
+    title = "Loan Amount Distributions",
+    subtitle = "by Grade and Purpose",
+    caption = "Subset of 2018 Lending Club Loan Data",
+    y = "Loan Amount", x = "Grade", fill = "Purpose"
+  ) +
+  theme_minimal()
+```
+
+
+```{r}
+# Your Turn
+# Write your code under this line, anywhere in this shaded section
+
+
+
+```
+
